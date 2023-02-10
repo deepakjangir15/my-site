@@ -46,7 +46,8 @@ class SinglePostView(View):
             'post_tags': post.tags.all(),
             'comment_form': CommentForm(),
             'comments': post.comments.all().order_by('-id')[:4],
-            'saved_for_later': self.is_stored_post(request,post.id)
+            'saved_for_later': self.is_stored_post(request,post.id),
+            'post_url_n_exists': post.url is None
         }
 
         return render(request,"blog/post-detail.html", context)

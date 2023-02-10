@@ -36,8 +36,7 @@
         </div>
 
         <div id='post-url'>
-            <button class="button-22" role="button" > <a href="{{ post.url }}" target="_blank">Link to the Post</button>
-            {% comment %} <a href="{{ post.url }}">Link to the Post<p> {% endcomment %}
+            <a href="{{ post.url }}" target="_blank"><button type='button' {% if post_url_n_exists %}disabled{% endif %}>{% if post_url_n_exists %}No Link!{% else %}Link to the Post{% endif %}</button></a>
         </div>
 
         <article>
