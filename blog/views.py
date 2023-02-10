@@ -13,7 +13,7 @@ from .forms import CommentForm
 class Index(ListView):
     template_name = 'blog/index.html'
     model = Post
-    ordering = ["-date"]
+    ordering = ["date"]
     context_object_name = 'posts'
 
     def get_queryset(self):
