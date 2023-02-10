@@ -40,7 +40,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 media/
-settings.py
 
 # Django #
 *.log
