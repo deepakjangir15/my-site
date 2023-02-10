@@ -13,15 +13,35 @@
     
     <section id='welcome'>
         <header>
-            <img src="{% static 'blog/images/deepak.jpeg' %}" alt="Deepak - The Author">
-            <h2>Deepak Jangir Blog</h2>
+            <img src="{% static 'blog/images/deepak.jpeg' %}" class='profile-pic' alt="Deepak - The Author">
+            <h2>Deepak Jangir's Blog</h2>
+            <h1>
+                <a href="https://www.instagram.com/deepakxpvt" target="_blank">
+                  <img src="{% static 'blog/images/instagram.png' %}" alt="Instagram Profile">
+                </a>
+              </h1>
+
+              <h1>
+                <a href="https://www.linkedin.com/in/deepak-jangir-72333a188/" target="_blank">
+                  <img src="{% static 'blog/images/linkedin.png' %}" alt="Linkedin Profile">
+                </a>
+              </h1>
+
+              <h1>
+                <a href="https://github.com/tdeepak509" target="_blank">
+                  <img src="{% static 'blog/images/github-sign.png' %}" alt="Github Profile">
+                </a>
+              </h1>
         </header>
-        <p>Hi. My name is Deepak and I love Datasciene and Web Development</p>
+
+        <p align='justify'>Greetings and salutations! I'm Deepak Jangir, a tech lover with a passion for data science and web development. I'm currently diving into the deep end of the pool and building a blog using Django. This might be a bit of a rocky road, but that's just the thrill of the journey, right? 
+            <br><br>I'm eager to share my projects and innovative musings with the world, so join me as I navigate the ups and downs of this exciting project. Don't be surprised if you see an error or two along the way, 
+            I'm still mastering the art of Django. Here's to a creative and playful ride!</p>
     </section>
 
 
     <section id='latest-posts'>
-        <h2>My Latest Thoughts</h2>
+        <h2>My Latest Posts</h2>
         <ul>
             {% for post in posts %}
                 {% include "blog/includes/post.html" %}
@@ -31,9 +51,10 @@
 
 
     <section id='about'>
-        <h2>What I Do</h2>
-        <p>I love programming with python and anything that has to do with python.</p>
+        <h2>What I Do?</h2>
+        <p>I am a passionate programmer who thrives on working with Python.
+        My goal is to continuously develop my skills as both a Data Scientist, Web Developer and anything to do with python. </p>
 
-        <p>My goal is to keep growing as a Data Scientist and a Web developer. Join me in this journey?</p>
+        <p>oin me on this exciting journey of growth and discovery. Let's explore the vast potential of Python and see where it takes us.</p>
     </section>
 {% endblock content %}

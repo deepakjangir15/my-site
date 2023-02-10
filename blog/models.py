@@ -30,6 +30,7 @@ class Post(models.Model):
     content = models.TextField(validators=[MinLengthValidator(10)])
     author = models.ForeignKey(Author, on_delete=models.SET_NULL, related_name='posts',null=True)
     tags = models.ManyToManyField(Tag)
+    url = models.URLField(max_length=200, blank=True, default='',null=True)
 
     def __str__(self):
         return f"{self.title}"

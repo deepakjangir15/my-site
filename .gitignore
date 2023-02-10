@@ -8,3 +8,4 @@ blog/__pycache__/
 blog/migrations/
 my_site/__pycache__/
 django-venv/
+db.sqlite3
