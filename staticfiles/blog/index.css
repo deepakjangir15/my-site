@@ -6,7 +6,7 @@
 #welcome header {
     display: flex;
     justify-content:space;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     flex-direction: row;
     /* justify-content: center; */
     /* align-items: flex-start; */
