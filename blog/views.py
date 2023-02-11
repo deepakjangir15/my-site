@@ -116,14 +116,17 @@ class AdminPageView(RedirectView):
 class CertificationsPageView(ListView):
     template_name = 'blog/certifications.html'
     model = Certificate
-    # ordering = ["-date"]
     context_object_name = 'certificates'
 
-    # def get_queryset(self):
-    #     query_set = super().get_queryset()
-    #     data = query_set[:3]
-    #     return data
-
+class SingleCertificateView(View):
+     def get(self,request,slug):
+        certificate = Certificate.objects.get(slug=slug)
+        
+        context = {
+            'certificate': certificate
+        }
+    
+        return render(request,"blog/includes/certificate.html", context)
 
 
         

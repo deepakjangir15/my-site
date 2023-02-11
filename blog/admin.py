@@ -10,9 +10,12 @@ class PostAdmin(admin.ModelAdmin):
 class CommentAdmin(admin.ModelAdmin):
     list_display = ('user_name','post')
 
+class CertificateAdmin(admin.ModelAdmin):
+    prepopulated_fields = {'slug': ('certificate_credential_id',)}
+
 
 admin.site.register(Post,PostAdmin)
 admin.site.register(Author)
 admin.site.register(Tag)
 admin.site.register(Comment,CommentAdmin)
-admin.site.register(Certificate)
+admin.site.register(Certificate,CertificateAdmin)

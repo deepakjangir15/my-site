@@ -47,8 +47,9 @@ class Certificate(models.Model):
     certificate_issuer = models.CharField(max_length=100)
     certificate_issue_date = models.DateField()
     certificate_expiry_date = models.DateField(null=True,blank=True)
-    certificate_credential_id = models.CharField(max_length=120,null=True,blank=True)
+    certificate_credential_id = models.CharField(max_length=120)
     certificate_url = models.URLField(max_length=200, blank=True, default='',null=True)
+    slug = models.SlugField(unique=True, db_index=True,null=True)
 
     def __str__(self):
         return f"{self.certificate_name}"
