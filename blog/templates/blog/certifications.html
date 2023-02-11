@@ -14,7 +14,7 @@
 <section id="certifications">
     {% for certificate in certificates %}
         <div class="list-group">
-            <a href="{% url 'single-certificate' certificate.certificate_credential_id %}" class="list-group-item active">
+            <a href="{% url 'single-certificate' certificate.slug %}" class="list-group-item active">
                 <h4 class="list-group-item-heading">{{ certificate.certificate_name }}</h4>
                 <p class="list-group-item-text">{{ certificate.certificate_issuer }} - {{ certificate.certificate_credential_id }}</p>
             </a>
