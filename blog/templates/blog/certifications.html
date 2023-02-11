@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Stored Posts{% endblock title %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "blog/stored-posts.css" %}">
+    <link rel="stylesheet" href="{% static "blog/certificate.css" %}">
+{% endblock css_files %}
+
+{% block content %}
+
+<section id="certifications">
+    {% for certificate in certificates %}
+        <div class="list-group">
+            <a href="#" class="list-group-item active">
+                <h4 class="list-group-item-heading">{{ certificate.certificate_name }}</h4>
+                <p class="list-group-item-text">{{ certificate.certificate_issuer }} - {{ certificate.certificate_credential_id }}</p>
+            </a>
+        </div>
+    {% endfor %}
+</section>
+  
+{% endblock content %}
+
+
+
+

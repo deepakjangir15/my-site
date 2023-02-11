@@ -7,7 +7,7 @@ from django.views.generic.base import RedirectView
 from django.views import View
 
 # Create your views here.
-from .models import Post
+from .models import Post,Certificate
 from .forms import CommentForm
 
 class Index(ListView):
@@ -112,6 +112,17 @@ class ReadLaterView(View):
 
 class AdminPageView(RedirectView):
     url = '/admin/'
+
+class CertificationsPageView(ListView):
+    template_name = 'blog/certifications.html'
+    model = Certificate
+    # ordering = ["-date"]
+    context_object_name = 'certificates'
+
+    # def get_queryset(self):
+    #     query_set = super().get_queryset()
+    #     data = query_set[:3]
+    #     return data
 
 
 

@@ -1,0 +1,12 @@
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    z-index: 2;
+    color: #fff;
+    background-color: rebeccapurple;
+    border-color: #000000;
+}
+
+#certifications {
+    margin: auto;
+    width: 40%;
+    padding: 70px;  
+}
